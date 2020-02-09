@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vinyl.API", "Vinyl.API\Vinyl.API.csproj", "{B7D2FF27-3979-4A5B-9C09-2B4CE9D315E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vinyl.Api", "Vinyl.API\Vinyl.Api.csproj", "{B7D2FF27-3979-4A5B-9C09-2B4CE9D315E2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vinyl.Domain", "Vinyl.Domain\Vinyl.Domain.csproj", "{14CC8D5E-9C97-48D6-8F15-3BCA1E5141EB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vinyl.Test", "Vinyl.Test\Vinyl.Test.csproj", "{59E4C942-3EE5-4098-85F9-0266C8DC40CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infrastructure", "Common.Infrastructure\Common.Infrastructure.csproj", "{2E560562-9F48-490D-AF29-1593EFAB8109}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Infrastructure", "Common.Infrastructure\Common.Infrastructure.csproj", "{2E560562-9F48-490D-AF29-1593EFAB8109}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Test", "Common.Test\Common.Test.csproj", "{0D315798-4A6B-428B-A92D-6AD0390229AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Test", "Common.Test\Common.Test.csproj", "{0D315798-4A6B-428B-A92D-6AD0390229AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8B3961FD-4D6A-4C8B-BF06-C01BB3881512}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VinylAPI", "VinylAPI", "{889A5198-4068-4D79-B090-5DBD0F15A3FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vinyl.Data", "Vinyl.Data\Vinyl.Data.csproj", "{0F3F8976-96F0-4FB6-8E82-216A2C581F6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{0D315798-4A6B-428B-A92D-6AD0390229AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D315798-4A6B-428B-A92D-6AD0390229AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D315798-4A6B-428B-A92D-6AD0390229AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F3F8976-96F0-4FB6-8E82-216A2C581F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F3F8976-96F0-4FB6-8E82-216A2C581F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F3F8976-96F0-4FB6-8E82-216A2C581F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F3F8976-96F0-4FB6-8E82-216A2C581F6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{59E4C942-3EE5-4098-85F9-0266C8DC40CB} = {889A5198-4068-4D79-B090-5DBD0F15A3FF}
 		{2E560562-9F48-490D-AF29-1593EFAB8109} = {8B3961FD-4D6A-4C8B-BF06-C01BB3881512}
 		{0D315798-4A6B-428B-A92D-6AD0390229AD} = {8B3961FD-4D6A-4C8B-BF06-C01BB3881512}
+		{0F3F8976-96F0-4FB6-8E82-216A2C581F6A} = {889A5198-4068-4D79-B090-5DBD0F15A3FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22FBCB45-3874-4817-B147-B75093F8D044}
