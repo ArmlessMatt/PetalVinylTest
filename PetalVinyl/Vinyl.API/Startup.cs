@@ -9,7 +9,7 @@ using Vinyl.Data.Services;
 using Vinyl.Domain.Interfaces;
 using Vinyl.Domain.Services;
 
-namespace Vinyl.API
+namespace Vinyl.Api
 {
     public class Startup
     {
