@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Vinyl.Api.Constants;
 using Vinyl.Domain.Interfaces;
 
-namespace Vinyl.API.Controllers
+namespace Vinyl.Api.Controllers
 {
     [ApiController]
     public class VinylController : ControllerBase
