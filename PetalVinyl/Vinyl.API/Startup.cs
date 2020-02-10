@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Common.Infrastructure.Interfaces;
+using Common.Infrastructure.Services;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Vinyl.Data.Services;
+using Vinyl.Domain.Interfaces;
 
 namespace Vinyl.API
 {
@@ -20,6 +24,8 @@ namespace Vinyl.API
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddHttpClient();
+            services.AddTransient(typeof(IHttpClient), typeof(HttpClient));
+            services.AddSingleton(typeof(IVinylDataService), typeof(DiscogsVinylDataService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
