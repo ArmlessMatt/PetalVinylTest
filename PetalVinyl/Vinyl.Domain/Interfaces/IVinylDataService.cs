@@ -7,6 +7,6 @@ namespace Vinyl.Domain.Interfaces
     public interface IVinylDataService
     {
         ServiceResponse<int> GetTotalVinyls();
-        ServiceResponse<List<Models.Vinyl>> GetVinylsByIndex(int index);
+        ServiceResponse<List<Models.Vinyl>> GetVinylsByIndex(List<int> indexList);
     }
 }

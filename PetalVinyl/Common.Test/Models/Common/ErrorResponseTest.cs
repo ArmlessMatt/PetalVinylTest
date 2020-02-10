@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Common.Test.Models
+namespace Common.Test.Models.Common
 {
     [TestClass, ExcludeFromCodeCoverage]
     public class ErrorResponseTest
