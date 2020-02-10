@@ -2,7 +2,7 @@
 
 namespace Common.Infrastructure.Interfaces
 {
-    interface IHttpService
+    public interface IHttpClient
     {
         HttpResponse<T> Get<T>(string url, string path, QueryParameter[] queryParameters);
     }

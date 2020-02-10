@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Vinyl.Domain.Interfaces
 {
-    interface IVinylDataService
+    public interface IVinylDataService
     {
         ServiceResponse<int> GetTotalVinyls();
         ServiceResponse<List<Models.Vinyl>> GetVinylsByIndex(int index);
