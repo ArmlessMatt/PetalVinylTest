@@ -53,15 +53,15 @@ namespace Vinyl.Test.Api.Controllers
         {
             //Arrange
             var numberOfVinyls = 4;
-            var expectedResult = new SuccesResponse<List<Domain.Models.Vinyl>>(
-                fixture.Create<List<Domain.Models.Vinyl>>()); 
+            var expectedResult = new SuccesResponse<List<Vinyl.Domain.Models.Vinyl>>(
+                fixture.Create<List<Vinyl.Domain.Models.Vinyl>>()); 
                          
             vinylServiceMock.GetRandomVinyls(numberOfVinyls).Returns(expectedResult);
             //Act
             var controllerResult = vinylController.GetRandomVinyls(numberOfVinyls).Result as OkObjectResult;
             //Assert
             CollectionAssert.AreEquivalent(expectedResult.Response, 
-                controllerResult.Value as List<Domain.Models.Vinyl>);
+                controllerResult.Value as List<Vinyl.Domain.Models.Vinyl>);
         }
 
         [TestMethod]
@@ -69,7 +69,7 @@ namespace Vinyl.Test.Api.Controllers
         {
             //Arrange
             var numberOfVinyls = 4;
-            var expectedResult = new ErrorResponse<List<Domain.Models.Vinyl>>(
+            var expectedResult = new ErrorResponse<List<Vinyl.Domain.Models.Vinyl>>(
                 fixture.Create<List<string>>());
 
             vinylServiceMock.GetRandomVinyls(numberOfVinyls).Returns(expectedResult);
