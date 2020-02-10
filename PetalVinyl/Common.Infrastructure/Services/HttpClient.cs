@@ -25,17 +25,19 @@ namespace Common.Infrastructure.Services
             if (queryParameters != null)
             {
                 var stringParamsList = queryParameters.Select(queryParam => queryParam.ToString());
-                fullUrl += string.Join("&", stringParamsList);
+                fullUrl += "?" + string.Join("&", stringParamsList);
             }
             var request = new HttpRequestMessage(HttpMethod.Get, fullUrl);
+            request.Headers.Add("Accept", "application/json");
+            request.Headers.Add("User-Agent", "HttpClient");
 
             var client = httpFactory.CreateClient();
             var httpResponse = await client.SendAsync(request);
 
             var clientResponse = new HttpResponse<T>();
-            var responseStream = await httpResponse.Content.ReadAsStreamAsync();
+            var responseStream = await httpResponse.Content.ReadAsStringAsync();
             clientResponse.Status = httpResponse.StatusCode;
-            clientResponse.Content = JsonConvert.DeserializeObject<T>(responseStream.ToString());
+            clientResponse.Content = JsonConvert.DeserializeObject<T>(responseStream);
 
             return clientResponse;
         }

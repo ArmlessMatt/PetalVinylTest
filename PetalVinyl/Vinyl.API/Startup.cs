@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Vinyl.Data.Services;
 using Vinyl.Domain.Interfaces;
+using Vinyl.Domain.Services;
 
 namespace Vinyl.API
 {
@@ -26,6 +27,7 @@ namespace Vinyl.API
             services.AddHttpClient();
             services.AddTransient(typeof(IHttpClient), typeof(HttpClient));
             services.AddSingleton(typeof(IVinylDataService), typeof(DiscogsVinylDataService));
+            services.AddSingleton(typeof(IVinylService), typeof(VinylService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,10 +5,10 @@ namespace Vinyl.Data.Models.Discogs
 {
     public class DiscogsPaginationInfo
     {
-        [JsonProperty("name")]
+        [JsonProperty("per_page")]
         public int ElementsPerPage { get; set; }
 
-        [JsonProperty("name")]
+        [JsonProperty("items")]
         public int NumberOfElements { get; set; }
     }
 }
