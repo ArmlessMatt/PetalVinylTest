@@ -25,7 +25,7 @@ namespace Vinyl.Domain.Services
             Random rand = new Random();
             List<int> selectedRandomIndexes = new List<int>();
             int number;
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < numberOfVinyls; i++)
             {
                 do
                 {
@@ -34,7 +34,7 @@ namespace Vinyl.Domain.Services
                 selectedRandomIndexes.Add(number);
             }
 
-            var randomVinyls = dataService.GetVinylsByIndex(selectedRandomIndexes);
+            var randomVinyls = dataService.GetVinylsByIndex(selectedRandomIndexes).Result;
             if (!randomVinyls.IsSucces)
             {
                 return new ErrorResponse<List<Models.Vinyl>>(randomVinyls.ErrorMessages);

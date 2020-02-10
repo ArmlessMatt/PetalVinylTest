@@ -22,9 +22,9 @@ namespace Vinyl.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<object> GetRandomVinyls([FromQuery(Name = "numberOfVinyls")] int numberOfVinyls = 5)
         {
-            if (numberOfVinyls > 10 || numberOfVinyls < 1)
+            if (numberOfVinyls > 5 || numberOfVinyls < 1)
             {
-                return BadRequest(new List<string> { Messages.VINYL_NUMBER_BETWEEN_ONE_AND_TEN });
+                return BadRequest(new List<string> { Messages.VINYL_NUMBER_BETWEEN_ONE_AND_FIVE });
             }
             var result = vinylService.GetRandomVinyls(numberOfVinyls);
 
